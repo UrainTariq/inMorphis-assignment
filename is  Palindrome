@@ -1,0 +1,39 @@
+function isPalindrome(str) {
+    // Function to check if a string is a palindrome
+    let left = 0;
+    let right = str.length - 1;
+    while (left < right) {
+        if (str[left] !== str[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+
+function longestPalindrome(s) {
+    // Function to find the longest palindrome in a string
+    if (s.length === 0) {
+        return ""; // Return empty string for empty input
+    }
+    
+    let longest = "";
+    
+    // Iterate through each possible substring
+    for (let start = 0; start < s.length; start++) {
+        for (let end = start + 1; end <= s.length; end++) {
+            let substr = s.substring(start, end);
+            if (isPalindrome(substr) && substr.length > longest.length) {
+                longest = substr;
+            }
+        }
+    }
+    
+    return longest;
+}
+
+// Example usage:
+let inputString = "babad";
+let result = longestPalindrome(inputString);
+console.log("Longest palindrome in '" + inputString + "' is: " + result);
