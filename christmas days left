@@ -1,0 +1,12 @@
+let today = new Date();
+let currentYear = today.getFullYear();
+let christmas = new Date(currentYear, 11, 25);
+
+if (today.getMonth() === 11 && today.getDate() > 25) {
+    christmas.setFullYear(currentYear + 1);
+}
+
+let difference = christmas.getTime() - today.getTime();
+let daysLeft = Math.ceil(difference / (1000 * 60 * 60 * 24));
+
+console.log(`Days left until Christmas: ${daysLeft}`);
