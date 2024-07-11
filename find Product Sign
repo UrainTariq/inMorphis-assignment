@@ -1,0 +1,17 @@
+function findProductSign(x, y, z) {
+    let product = x * y * z;
+    let sign = '';
+    
+    if (product > 0) {
+        sign = 'positive';
+    } else if (product < 0) {
+        sign = 'negative';
+    } else {
+        sign = 'zero';
+    }
+    
+    console.log(`The sign is ${sign}`);
+}
+
+let numX = 3, numY = -7, numZ = 2;
+findProductSign(numX, numY, numZ); 
