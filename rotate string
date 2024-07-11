@@ -1,0 +1,10 @@
+let str = 'w3resource';
+
+function rotateStringRight(s) {
+    return s.charAt(s.length - 1) + s.slice(0, s.length - 1);
+}
+
+setInterval(() => {
+    str = rotateStringRight(str);
+    console.log(str);
+}, 1000);
