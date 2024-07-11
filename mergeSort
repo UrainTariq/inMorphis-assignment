@@ -1,0 +1,33 @@
+function mergeSort(array) {
+    if (array.length <= 1) {
+        return array; // Base case: Array with 0 or 1 element is already sorted
+    }
+    
+    let mid = Math.floor(array.length / 2);
+    let left = mergeSort(array.slice(0, mid)); // Recursive case: Sort left half
+    let right = mergeSort(array.slice(mid)); // Recursive case: Sort right half
+    
+    return merge(left, right);
+}
+
+function merge(left, right) {
+    let result = [];
+    let leftIndex = 0;
+    let rightIndex = 0;
+    
+    while (leftIndex < left.length && rightIndex < right.length) {
+        if (left[leftIndex] < right[rightIndex]) {
+            result.push(left[leftIndex]);
+            leftIndex++;
+        } else {
+            result.push(right[rightIndex]);
+            rightIndex++;
+        }
+    }
+    
+    return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+
+// Example usage:
+let unsortedArray = [34, 7, 23, 32, 5, 62];
+console.log(`Sorted array:`, mergeSort(unsortedArray)); // Output: Sorted array: [5, 7, 23, 32, 34, 62]
