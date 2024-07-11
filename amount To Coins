@@ -1,0 +1,20 @@
+function amountToCoins(amount, coins) {
+    if (amount <= 0 || !Number.isInteger(amount)) {
+        return "Please enter a positive integer amount.";
+    }
+
+    let result = [];
+
+    for (let i = 0; i < coins.length; i++) {
+        while (amount >= coins[i]) {
+            result.push(coins[i]);
+            amount -= coins[i];
+        }
+    }
+
+    return result;
+}
+console.log(amountToCoins(46, [25, 10, 5, 2, 1])); // Output: [25, 10, 10, 1]
+console.log(amountToCoins(68, [50, 20, 10, 5, 2, 1])); // Output: [50, 10, 5, 2, 1]
+console.log(amountToCoins(0, [25, 10, 5, 2, 1])); // Output: "Please enter a positive integer amount."
+console.log(amountToCoins(-10, [25, 10, 5, 2, 1])); // Output: "Please enter a positive integer amount."
