@@ -1,0 +1,14 @@
+function insertDashes(num) {
+    let numStr = num.toString();
+    let result = '';
+    for (let i = 0; i < numStr.length; i++) {
+        result += numStr[i];
+        if (i < numStr.length - 1 && numStr[i] % 2 === 0 && numStr[i + 1] % 2 === 0) {
+            result += '-';
+        }
+    }
+    return result;
+}
+
+// Test Data
+console.log(insertDashes(025468)); // "0-254-6-8"
