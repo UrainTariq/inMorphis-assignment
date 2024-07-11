@@ -1,0 +1,24 @@
+function last(arr, n) {
+    if (n === undefined) {
+        n = 1; // Default value for n
+    }
+
+    if (n < 0) {
+        return [];
+    } else if (n === 1) {
+        return arr[arr.length - 1];
+    } else {
+        let result = [];
+        for (let i = arr.length - n; i < arr.length; i++) {
+            if (i >= 0) {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+}
+
+// Test Data
+console.log(last([7, 9, 0, -2])); // -2
+console.log(last([7, 9, 0, -2], 3)); // [9, 0, -2]
+console.log(last([7, 9, 0, -2], 6)); // [7, 9, 0, -2]
