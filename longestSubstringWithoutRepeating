@@ -1,0 +1,23 @@
+function longestSubstringWithoutRepeating(str) {
+    let longestSubstr = '';
+    let currentSubstr = '';
+    let start = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str.charAt(i);
+        let index = currentSubstr.indexOf(char);
+        if (index !== -1) {
+            start = start + index + 1;
+        }
+        currentSubstr = str.slice(start, i + 1);
+        if (currentSubstr.length > longestSubstr.length) {
+            longestSubstr = currentSubstr;
+        }
+    }
+
+    return longestSubstr;
+}
+
+let inputString = "abcabcbb";
+let longestSubstring = longestSubstringWithoutRepeating(inputString);
+console.log("Longest substring without repeating characters:", longestSubstring);
