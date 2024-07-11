@@ -1,0 +1,17 @@
+function countLetterOccurrences(str) {
+    let count = {};
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if (count[char]) {
+            count[char]++;
+        } else {
+            count[char] = 1;
+        }
+    }
+    return count;
+}
+let inputString = "Hello World! 123";
+let letterCounts = countLetterOccurrences(inputString);
+for (let letter in letterCounts) {
+    console.log(`${letter}: ${letterCounts[letter]}`);
+}
