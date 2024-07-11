@@ -1,0 +1,24 @@
+function first(arr, n) {
+    if (n === undefined) {
+        n = 1; // Default value for n
+    }
+
+    if (n < 0) {
+        return [];
+    } else if (n === 1) {
+        return arr[0];
+    } else {
+        let result = [];
+        for (let i = 0; i < n && i < arr.length; i++) {
+            result.push(arr[i]);
+        }
+        return result;
+    }
+}
+
+// Test Data
+console.log(first([7, 9, 0, -2])); // 7
+console.log(first([], 3)); // []
+console.log(first([7, 9, 0, -2], 3)); // [7, 9, 0]
+console.log(first([7, 9, 0, -2], 6)); // [7, 9, 0, -2]
+console.log(first([7, 9, 0, -2], -3)); // []
