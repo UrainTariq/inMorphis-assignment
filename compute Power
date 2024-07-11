@@ -1,0 +1,16 @@
+function computePower(base, exponent) {
+    let result = 1;
+    for (let i = 0; i < exponent; i++) {
+        result *= base;
+    }
+    return result;
+}
+
+let base = prompt("Enter the base (b): ");
+let exponent = prompt("Enter the exponent (n): ");
+
+base = parseFloat(base);
+exponent = parseInt(exponent);
+
+let powerResult = computePower(base, exponent);
+console.log(`Result of ${base}^${exponent} is: ${powerResult}`);
