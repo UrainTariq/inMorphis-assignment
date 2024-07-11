@@ -1,0 +1,20 @@
+function isPalindrome(str) {
+    let reversedStr = '';
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversedStr += str[i];
+    }
+
+    if (str === reversedStr) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Example usage:
+let str1 = "madam";
+let str2 = "hello";
+
+console.log(isPalindrome(str1)); // Output: true
+console.log(isPalindrome(str2)); // Output: false
