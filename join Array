@@ -1,0 +1,8 @@
+function joinArray(arr, separator = ',') {
+    return arr.join(separator);
+}
+
+let myColor = ["Red", "Green", "White", "Black"];
+
+console.log(joinArray(myColor)); // "Red,Green,White,Black"
+console.log(joinArray(myColor, '+')); // "Red+Green+White+Black"
