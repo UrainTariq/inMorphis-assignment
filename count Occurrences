@@ -1,0 +1,15 @@
+function countOccurrences(str, letter) {
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        if (str.charAt(i) === letter) {
+            count++;
+        }
+    }
+    return count;
+}
+
+let inputString = 'w3resource.com';
+let targetLetter = 'o';
+
+let occurrences = countOccurrences(inputString, targetLetter);
+console.log(`Number of occurrences of '${targetLetter}' in '${inputString}':`, occurrences);
