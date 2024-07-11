@@ -1,0 +1,26 @@
+function isPerfectNumber(num) {
+    if (num <= 1) {
+        return false;
+    }
+
+    let sum = 1; // Start with 1 since every number has 1 as a divisor
+
+    // Find all divisors up to sqrt(num)
+    for (let i = 2; i * i <= num; i++) {
+        if (num % i === 0) {
+            sum += i;
+            if (i !== num / i) {
+                sum += num / i;
+            }
+        }
+    }
+
+    // Check if the sum of divisors equals num
+    return sum === num;
+}
+:
+console.log(isPerfectNumber(6)); 
+console.log(isPerfectNumber(28));  
+console.log(isPerfectNumber(496));  
+console.log(isPerfectNumber(8128)); 
+console.log(isPerfectNumber(27));   
