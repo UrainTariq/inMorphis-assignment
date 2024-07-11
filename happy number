@@ -1,0 +1,36 @@
+function isHappyNumber(num) {
+    let seenNumbers = {};
+    
+    while (num !== 1 && !seenNumbers[num]) {
+        seenNumbers[num] = true;
+        num = getSumOfSquares(num);
+    }
+    
+    return num === 1;
+}
+
+function getSumOfSquares(num) {
+    let sum = 0;
+    while (num > 0) {
+        let digit = num % 10;
+        sum += digit * digit;
+        num = Math.floor(num / 10);
+    }
+    return sum;
+}
+
+function findFirstHappyNumbers(count) {
+    let found = 0;
+    let number = 1;
+    
+    while (found < count) {
+        if (isHappyNumber(number)) {
+            console.log(number);
+            found++;
+        }
+        number++;
+    }
+}
+
+// Find and print the first 5 happy numbers
+findFirstHappyNumbers(5);
