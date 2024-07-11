@@ -1,0 +1,12 @@
+function fibonacci(n) {
+    if (n === 1) {
+        return [0, 1]; // Base case: First Fibonacci number
+    } else {
+        let fib = fibonacci(n - 1);
+        fib.push(fib[fib.length - 1] + fib[fib.length - 2]); // Calculate next Fibonacci number
+        return fib;
+    }
+}
+
+let count = 7;
+console.log(`First ${count} Fibonacci numbers:`, fibonacci(count)); // Output: First 7 Fibonacci numbers: [0, 1, 1, 2, 3, 5, 8]
