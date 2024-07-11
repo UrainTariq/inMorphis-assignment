@@ -1,0 +1,18 @@
+let now = new Date();
+
+let day = now.getDate();
+let month = now.getMonth() + 1;
+let year = now.getFullYear();
+
+day = day < 10 ? '0' + day : day;
+month = month < 10 ? '0' + month : month;
+
+let mmddyyyy_dash = `${month}-${day}-${year}`;
+let mmddyyyy_slash = `${month}/${day}/${year}`;
+let ddmmyyyy_dash = `${day}-${month}-${year}`;
+let ddmmyyyy_slash = `${day}/${month}/${year}`;
+
+console.log(mmddyyyy_dash);
+console.log(mmddyyyy_slash);
+console.log(ddmmyyyy_dash);
+console.log(ddmmyyyy_slash);
