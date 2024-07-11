@@ -1,0 +1,39 @@
+function calculateGrade(marks) {
+    let average = calculateAverage(marks);
+    
+    // Determine grade based on average marks
+    if (average < 60) {
+        return 'F';
+    } else if (average < 70) {
+        return 'D';
+    } else if (average < 80) {
+        return 'C';
+    } else if (average < 90) {
+        return 'B';
+    } else {
+        return 'A';
+    }
+}
+
+function calculateAverage(marks) {
+    let total = 0;
+    for (let mark of marks) {
+        total += mark;
+    }
+    return total / marks.length;
+}
+
+// Student data
+let students = {
+    David: [80],
+    Vinoth: [77],
+    Divya: [88],
+    Ishitha: [95],
+    Thomas: [68]
+};
+
+// Calculate and display grades for each student
+for (let student in students) {
+    let grade = calculateGrade(students[student]);
+    console.log(`${student}: Average marks = ${calculateAverage(students[student])}, Grade = ${grade}`);
+}
