@@ -1,0 +1,27 @@
+function getSubsets(arr, k) {
+    let results = [];
+
+    // Helper function to generate subsets recursively
+    function generateSubsets(currentSubset, start) {
+        if (currentSubset.length === k) {
+            results.push(currentSubset.slice()); // Push a copy of currentSubset
+            return;
+        }
+
+        for (let i = start; i < arr.length; i++) {
+            currentSubset.push(arr[i]);
+            generateSubsets(currentSubset, i + 1); // Recursive call with next index
+            currentSubset.pop(); // Backtrack: remove last element for next iteration
+        }
+    }
+
+    generateSubsets([], 0); // Start with an empty subset and index 0
+    return results;
+}
+
+// Example usage:
+let array = [1, 2, 3];
+let subsetLength = 2;
+
+let subsets = getSubsets(array, subsetLength);
+console.log(`Subsets of length ${subsetLength}:`, subsets);
