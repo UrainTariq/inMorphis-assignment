@@ -1,0 +1,19 @@
+function getFunctionName(func) {
+    // Check if the provided parameter is a function
+    if (typeof func !== 'function') {
+        return 'Not a function';
+    }
+    
+    // Return the name of the function using the name property
+    return func.name;
+}
+
+// Example usage:
+
+function greet() {
+    console.log("Hello, world!");
+}
+
+// Getting the function name and logging it
+let functionName = getFunctionName(greet);
+console.log("Function name:", functionName); // Output: Function name: greet
