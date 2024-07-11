@@ -1,0 +1,11 @@
+function power(base, exponent) {
+    if (exponent === 0) {
+        return 1; // Base case: Any number to the power of 0 is 1
+    } else {
+        return base * power(base, exponent - 1); // Recursive case: base^exponent = base * base^(exponent-1)
+    }
+}
+
+let base = 8;
+let exponent = 2;
+console.log(`${base}^${exponent} is:`, power(base, exponent)); // Output: 8^2 is: 64
