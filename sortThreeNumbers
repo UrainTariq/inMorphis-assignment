@@ -1,0 +1,23 @@
+function sortThreeNumbers(x, y, z) {
+    let first, second, third;
+
+    // Find the largest number
+    if (x >= y && x >= z) {
+        first = x;
+        second = y >= z ? y : z;
+        third = y < z ? y : z;
+    } else if (y >= x && y >= z) {
+        first = y;
+        second = x >= z ? x : z;
+        third = x < z ? x : z;
+    } else {
+        first = z;
+        second = x >= y ? x : y;
+        third = x < y ? x : y;
+    }
+
+    console.log(`Sorted numbers: ${first}, ${second}, ${third}`);
+}
+
+let numA = 0, numB = -1, numC = 4;
+sortThreeNumbers(numA, numB, numC); // Output: "Sorted numbers: 4, 0, -1"
