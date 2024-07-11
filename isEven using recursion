@@ -1,0 +1,12 @@
+function isEven(number) {
+    if (number === 0) {
+        return true; // Base case: 0 is even
+    } else if (number === 1) {
+        return false; // Base case: 1 is odd
+    } else {
+        return isEven(number - 2); // Recursive case: Check for number - 2
+    }
+}
+
+let num = 6;
+console.log(`${num} is even:`, isEven(num)); // Output: 6 is even: true
