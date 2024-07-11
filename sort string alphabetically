@@ -1,0 +1,10 @@
+function sortStringAlphabetically(str) {
+    return str.split('').sort().join('');
+    // str.split(''): This splits the string str into an array of characters
+    //.sort(): This method sorts the elements of an array in place and returns the sorted array. By default, it sorts elements alphabetically.
+    //.join(''): This method joins all elements of the array into a string. The empty string '' as an argument ensures that the elements are concatenated without any separator.
+}
+
+let inputString = 'webmaster';
+let sortedString = sortStringAlphabetically(inputString);
+console.log(sortedString); // Output: 'abeemrstw'
