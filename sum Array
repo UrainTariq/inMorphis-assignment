@@ -1,0 +1,10 @@
+function sumArray(array) {
+    if (array.length === 0) {
+        return 0; // Base case: Sum of empty array is 0
+    } else {
+        return array[0] + sumArray(array.slice(1)); // Recursive case: Sum first element with sum of rest
+    }
+}
+
+let array = [1, 2, 3, 4, 5, 6];
+console.log(`Sum of array ${array}:`, sumArray(array));
