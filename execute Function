@@ -1,0 +1,10 @@
+function executeFunction(func) {
+    console.log("Executing the function provided:");
+    func(); // Call the function passed as parameter
+}
+
+// Define a function to be passed as parameter
+function greet() {
+    console.log("Hello, world!");
+}
+executeFunction(greet);
