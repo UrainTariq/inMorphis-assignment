@@ -1,0 +1,26 @@
+function computeFactors(num) {
+    if (num <= 0 || !Number.isInteger(num)) {
+        return "Please enter a positive integer.";
+    }
+
+    let factors = [];
+
+    for (let i = 1; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            factors.push(i);
+            if (i !== Math.sqrt(num)) {
+                factors.push(num / i);
+            }
+        }
+    }
+
+    return factors;
+}
+
+console.log(computeFactors(12));   // [1, 2, 3, 4, 6, 12]
+console.log(computeFactors(16));   // [1, 2, 4, 8, 16]
+console.log(computeFactors(28));   // [1, 2, 4, 7, 14, 28]
+console.log(computeFactors(31));   // [1, 31]
+console.log(computeFactors(1));    // [1]
+console.log(computeFactors(0));    // "Please enter a positive integer."
+console.log(computeFactors(-10));  // "Please enter a positive integer."
