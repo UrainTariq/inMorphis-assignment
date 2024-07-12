@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get Window Width and Height on Resize</title>
+<script>
+function getWindowSize() {
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    
+    alert("Window width: " + width + ", Height: " + height);
+}
+
+window.onresize = getWindowSize; // Call getWindowSize function on window resize
+</script>
+</head>
+<body>
+<p>Resize the window to see the width and height changes.</p>
+</body>
+</html>
