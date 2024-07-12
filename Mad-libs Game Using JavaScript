@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad-libs Game</title>
+    <style>
+        .highlighted {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mad-libs Game</h2>
+
+    <script>
+        // Prompt the user for inputs
+        let name = prompt("Enter your name:");
+        let word1 = prompt("Enter a noun:");
+        let word2 = prompt("Enter an adjective:");
+        let word3 = prompt("Enter a verb:");
+        let word4 = prompt("Enter another noun:");
+        let word5 = prompt("Enter another adjective:");
+        let color = prompt("Enter a color name or hex value (e.g., red or #FF0000):");
+
+        // Display Mad-libs story with highlighted words
+        document.write("<p>Hi, my name is <div class='highlighted'>" + name + "</div>. Today, I found a <div class='highlighted'>" + word1 + "</div> in my <div class='highlighted'>" + word2 + "</div> backyard. I decided to <div class='highlighted'>" + word3 + "</div> with it. Suddenly, a <div class='highlighted'>" + word4 + "</div> appeared out of nowhere, looking <div class='highlighted'>" + word5 + "</div>. It was such a <div class='highlighted' style='color:" + color + "'>" + color + "</div> day!</p>");
+    </script>
+</body>
+</html>
