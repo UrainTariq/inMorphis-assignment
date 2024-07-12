@@ -1,0 +1,8 @@
+function isValidURL(url) {
+    var urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
+    return urlPattern.test(url);
+}
+
+// Test
+console.log(isValidURL("http://example.com")); // true
+console.log(isValidURL("invalid-url")); // false
