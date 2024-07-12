@@ -1,0 +1,13 @@
+function isAlphanumeric(str) {
+    for (var i = 0; i < str.length; i++) {
+        var char = str[i];
+        if (!(char >= 'a' && char <= 'z') && !(char >= 'A' && char <= 'Z') && !(char >= '0' && char <= '9')) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Test
+console.log(isAlphanumeric("abc123")); // true
+console.log(isAlphanumeric("abc 123")); // false
