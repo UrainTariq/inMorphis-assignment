@@ -1,0 +1,18 @@
+function nthLargest(arr, n) {
+    // Step 1: Sort the array in descending order manually
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                // Swap elements
+                var temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+
+    // Step 2: Return the nth largest element
+    return arr[n - 1];
+}
+
+console.log(nthLargest([43, 56, 23, 89, 88, 90, 99, 652], 4)); // 89
