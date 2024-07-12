@@ -1,0 +1,10 @@
+function arrayRange(start, length) {
+    var result = [];
+    for (var i = 0; i < length; i++) {
+        result.push(start + i);
+    }
+    return result;
+}
+
+console.log(arrayRange(1, 4)); // [1, 2, 3, 4]
+console.log(arrayRange(-6, 4)); // [-6, -5, -4, -3]
