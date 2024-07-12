@@ -1,0 +1,7 @@
+function isNaN(value) {
+    return Number.isNaN(value);
+}
+
+// Example usage:
+console.log(isNaN(NaN)); // true
+console.log(isNaN('NaN')); // false
