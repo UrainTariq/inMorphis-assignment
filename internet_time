@@ -1,0 +1,12 @@
+function internet_time(date) {
+    let hours = date.getUTCHours();
+    let minutes = date.getUTCMinutes();
+    let seconds = date.getUTCSeconds();
+    let totalSeconds = hours * 3600 + minutes * 60 + seconds;
+    let beats = Math.floor(totalSeconds / 86.4);
+    return beats.toString().padStart(3, '0');
+}
+
+// Test
+let dt = new Date(1989, 10, 1);
+console.log(internet_time(dt)); // Output: "812"
