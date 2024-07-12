@@ -1,0 +1,7 @@
+function daylights_savings(date) {
+    return date.getTimezoneOffset() < new Date(date.getFullYear(), 0, 1).getTimezoneOffset() ? 1 : 0;
+}
+
+// Test
+let dt = new Date();
+console.log(daylights_savings(dt)); // Example output: 1 (if currently in daylight savings time)
