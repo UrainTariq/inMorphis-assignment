@@ -1,0 +1,17 @@
+function repeat_string(input, count) {
+    let repeated = '';
+
+    if (count < 0) {
+        return 'Error in string or count.';
+    }
+
+    for (let i = 0; i < count; i++) {
+        repeated += input;
+    }
+
+    return repeated;
+}
+
+// Test
+console.log(repeat_string('a', 4));
+console.log(repeat_string('a'));
