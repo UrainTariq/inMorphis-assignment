@@ -1,0 +1,14 @@
+function numStringRange(start, end, step) {
+    var alphabet = "abcdefghijklmnopqrstuvwxyz";
+    var range = [];
+    var startIndex = alphabet.indexOf(start);
+    var endIndex = alphabet.indexOf(end);
+
+    for (var i = startIndex; i <= endIndex; i += step) {
+        range.push(alphabet[i]);
+    }
+
+    return range;
+}
+
+console.log(numStringRange('a', 'z', 2)); // ["a", "c", "e", "g", "i", "k", "m", "o", "q", "s", "u", "w", "y"]
