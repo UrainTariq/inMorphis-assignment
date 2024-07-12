@@ -1,0 +1,8 @@
+function calculate_age(birthDate) {
+    let ageDifMs = Date.now() - birthDate.getTime();
+    let ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+console.log(calculate_age(new Date(1982, 11, 4)));  // 41
+console.log(calculate_age(new Date(1962, 1, 1)));   // 62
