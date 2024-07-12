@@ -1,0 +1,13 @@
+function remove_non_word(str) {
+    var cleanStr = '';
+    for (var i = 0; i < str.length; i++) {
+        var char = str.charAt(i);
+        if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') || char === '-' || char === ' ') {
+            cleanStr += char;
+        }
+    }
+    return cleanStr;
+}
+
+// Test case
+console.log(remove_non_word('PHP ~!@#$%^&*()+`-={}[]|\\:";\'/?><., MySQL'));  // "PHP - MySQL"
