@@ -1,0 +1,11 @@
+// Function to calculate supply needed
+function calculateSupply(age, amountPerDay) {
+    const maxAge = 80;
+    let amountNeeded = Math.round((maxAge - age) * 365 * amountPerDay);
+    console.log(`You will need ${amountNeeded} to last you until the ripe old age of ${maxAge}`);
+}
+
+// Call the function with different values
+calculateSupply(30, 2);
+calculateSupply(25, 3);
+calculateSupply(35, 1.5);
