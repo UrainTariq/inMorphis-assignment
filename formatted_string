@@ -1,0 +1,15 @@
+function formatted_string(pad, input, direction = 'l') {
+    let padded = input.toString();
+
+    if (direction === 'l') {
+        padded = pad.substring(0, pad.length - padded.length) + padded;
+    } else {
+        padded = padded + pad.substring(0, pad.length - padded.length);
+    }
+
+    return padded;
+}
+
+// Test
+console.log(formatted_string('0000', 123, 'l'));
+console.log(formatted_string('00000000', 123));
