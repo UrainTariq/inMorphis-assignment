@@ -1,0 +1,7 @@
+function min_date(dates) {
+    return new Date(Math.min.apply(null, dates.map(function(e) {
+        return new Date(e);
+    }))).toISOString().split('T')[0];
+}
+
+console.log(min_date(['2015/02/01', '2015/02/02', '2015/01/03'])); // "2015-01-03"
