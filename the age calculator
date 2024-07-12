@@ -1,0 +1,14 @@
+// Function to calculate age
+function calculateAge(birthYear, currentYear) {
+    let age1 = currentYear - birthYear;
+    let age2 = age1 - 1; // for the current year, the age hasn't incremented yet
+    console.log(`You are either ${age1} or ${age2}`);
+}
+
+// Get the current year
+let currentYear = new Date().getFullYear();
+
+// Call the function with different sets of values
+calculateAge(1990, currentYear);
+calculateAge(1985, currentYear);
+calculateAge(2000, currentYear);
