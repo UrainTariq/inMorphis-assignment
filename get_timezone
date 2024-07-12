@@ -1,0 +1,6 @@
+function get_timezone() {
+    return new Date().toLocaleString('en', { timeZoneName: 'long' }).split(' ').pop();
+}
+
+// Test
+console.log(get_timezone()); // Example output: "India Standard Time"
