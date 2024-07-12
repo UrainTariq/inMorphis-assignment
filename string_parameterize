@@ -1,0 +1,17 @@
+function string_parameterize(input) {
+    let trimmedLowerCase = input.trim().toLowerCase();
+    let parameterized = '';
+
+    for (let i = 0; i < trimmedLowerCase.length; i++) {
+        if (trimmedLowerCase[i] === ' ') {
+            parameterized += '-';
+        } else {
+            parameterized += trimmedLowerCase[i];
+        }
+    }
+
+    return parameterized;
+}
+
+// Test
+console.log(string_parameterize("Robin Singh from USA.")); // "robin-singh-from-usa"
