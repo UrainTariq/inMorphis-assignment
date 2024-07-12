@@ -1,0 +1,17 @@
+function isValidCreditCardNumber(number) {
+    var str = number.toString();
+    if (str.length !== 16) {
+        return false;
+    }
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] < '0' || str[i] > '9') {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Test
+console.log(isValidCreditCardNumber(1234567812345678)); // true
+console.log(isValidCreditCardNumber(123456781234567)); // false
+console.log(isValidCreditCardNumber("1234abcd5678efgh")); // false
