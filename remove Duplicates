@@ -1,0 +1,13 @@
+function removeDuplicates(arr) {
+    var uniqueItems = [];
+    for (var i = 0; i < arr.length; i++) {
+        var lowerCaseItem = arr[i].toLowerCase();
+        if (uniqueItems.indexOf(lowerCaseItem) === -1) {
+            uniqueItems.push(lowerCaseItem);
+        }
+    }
+    return uniqueItems;
+}
+
+var arr = ["Apple", "Banana", "apple", "Orange", "banana"];
+console.log(removeDuplicates(arr)); // ["apple", "banana", "orange"]
