@@ -1,0 +1,11 @@
+function union(arr1, arr2) {
+    var uniqueItems = arr1.slice(); // Copy arr1 into uniqueItems
+    for (var i = 0; i < arr2.length; i++) {
+        if (uniqueItems.indexOf(arr2[i]) === -1) {
+            uniqueItems.push(arr2[i]);
+        }
+    }
+    return uniqueItems;
+}
+
+console.log(union([1, 2, 3], [100, 2, 1, 10])); // [1, 2, 3, 100, 10]
