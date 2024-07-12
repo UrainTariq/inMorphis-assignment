@@ -1,0 +1,8 @@
+function isValidHexValue(hex) {
+    var pattern = /^0x[0-9A-Fa-f]+$/;
+    return pattern.test(hex);
+}
+
+// Test
+console.log(isValidHexValue("0x1A3F")); // true
+console.log(isValidHexValue("1A3G")); // false
