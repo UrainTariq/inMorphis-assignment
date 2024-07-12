@@ -1,0 +1,14 @@
+// Object to hold recipe information
+let recipe = {
+    title: "Mole",
+    servings: 2,
+    ingredients: ["cinnamon", "cumin", "cocoa"]
+};
+
+// Print recipe information
+console.log(recipe.title);
+console.log(`Serves: ${recipe.servings}`);
+console.log("Ingredients:");
+for (let ingredient of recipe.ingredients) {
+    console.log(ingredient);
+}
