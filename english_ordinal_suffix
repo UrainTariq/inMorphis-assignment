@@ -1,0 +1,9 @@
+function english_ordinal_suffix(dt) {
+    let day = dt.getDate();
+    let suffix = ["th", "st", "nd", "rd"];
+    let v = day % 100;
+    return day + (suffix[(v - 20) % 10] || suffix[v] || suffix[0]);
+}
+
+let dt = new Date(2015, 10, 1);
+console.log(english_ordinal_suffix(dt)); // "1st"
