@@ -1,0 +1,21 @@
+function isValidDomain(domain) {
+    var parts = domain.split('.');
+    if (parts.length < 2) {
+        return false;
+    }
+    for (var i = 0; i < parts.length; i++) {
+        if (parts[i].length === 0) {
+            return false;
+        }
+    }
+    var tld = parts[parts.length - 1];
+    if (tld.length < 2 || tld.length > 6) {
+        return false;
+    }
+    return true;
+}
+
+// Test
+console.log(isValidDomain("example.com")); // true
+console.log(isValidDomain("example")); // false
+console.log(isValidDomain(".com")); // false
