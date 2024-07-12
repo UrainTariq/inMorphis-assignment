@@ -1,0 +1,15 @@
+function Circle(radius) {
+    this.radius = radius;
+    
+    this.getArea = function() {
+        return (Math.PI * Math.pow(this.radius, 2)).toFixed(4);
+    };
+    
+    this.getPerimeter = function() {
+        return (2 * Math.PI * this.radius).toFixed(4);
+    };
+}
+
+var circle = new Circle(5);
+console.log("Area:", circle.getArea());
+console.log("Perimeter:", circle.getPerimeter());
