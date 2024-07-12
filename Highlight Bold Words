@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Highlight Bold Words</title>
+<style>
+.highlight {
+    background-color: yellow;
+}
+</style>
+<script>
+function highlightBoldWords() {
+    var paragraph = document.getElementById('content');
+    var boldWords = paragraph.getElementsByTagName('strong');
+    
+    for (var i = 0; i < boldWords.length; i++) {
+        boldWords[i].classList.add('highlight');
+    }
+}
+</script>
+</head>
+<body>
+<a href="#" onmouseover="highlightBoldWords()">On mouse over here bold words of the following paragraph will be highlighted</a>
+<p id="content">
+We have just started this section for the users (beginner to intermediate) who want to work with various <strong>JavaScript problems</strong> and write scripts online to test their <strong>JavaScript skill</strong>.
+</p>
+</body>
+</html>
