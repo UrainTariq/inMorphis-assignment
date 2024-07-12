@@ -1,0 +1,6 @@
+function strip(input) {
+    return input.trim();
+}
+
+// Test
+console.log(strip(' w3resource '));
