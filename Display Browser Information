@@ -25,3 +25,5 @@
         document.write("<h2>Page Modification Date:</h2>");
         document.write("Last Modified: " + document.lastModified + "<br>");
     </script>
+  </body>
+</html>
