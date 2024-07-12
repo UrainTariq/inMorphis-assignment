@@ -1,0 +1,17 @@
+function count(input, substring, caseSensitive = true) {
+    let count = 0;
+    let searchStr = caseSensitive ? input : input.toLowerCase();
+    let searchSub = caseSensitive ? substring : substring.toLowerCase();
+
+    for (let i = 0; i <= searchStr.length - searchSub.length; i++) {
+        if (searchStr.substring(i, i + searchSub.length) === searchSub) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// Test
+console.log(count("The quick brown fox jumps over the lazy dog", 'the'));
+console.log(count("The quick brown fox jumps over the lazy dog", 'fox', false));
