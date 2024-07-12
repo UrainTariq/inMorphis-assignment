@@ -1,0 +1,8 @@
+function isValidUKPostCode(postcode) {
+    var pattern = /^[A-Z]{1,2}\d{1,2} ?\d[A-Z]{2}$/i;
+    return pattern.test(postcode);
+}
+
+// Test
+console.log(isValidUKPostCode("SW1A 1AA")); // true
+console.log(isValidUKPostCode("12345")); // false
