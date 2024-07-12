@@ -1,0 +1,8 @@
+function isValidHexColor(hex) {
+    var pattern = /^#([0-9A-Fa-f]{3}|[0-9A-Fa-f]{6})$/;
+    return pattern.test(hex);
+}
+
+// Test
+console.log(isValidHexColor("#FFF")); // true
+console.log(isValidHexColor("#FFFFFZ")); // false
