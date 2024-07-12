@@ -1,0 +1,8 @@
+function subStrAfterChars(input, char, direction = 'a') {
+    let index = direction === 'a' ? input.indexOf(char) + 1 : input.lastIndexOf(char) + 1;
+    return input.substring(index);
+}
+
+// Test
+console.log(subStrAfterChars('w3resource: JavaScript Exercises', ':', 'a'));
+console.log(subStrAfterChars('w3resource: JavaScript Exercises', 'E', 'b'));
