@@ -1,0 +1,14 @@
+function case_insensitive_search(str, search) {
+    str = str.toLowerCase();
+    search = search.toLowerCase();
+    if (str.indexOf(search) !== -1) {
+        return "Matched";
+    } else {
+        return "Not Matched";
+    }
+}
+
+// Test cases
+console.log(case_insensitive_search('JavaScript Exercises', 'exercises'));   // "Matched"
+console.log(case_insensitive_search('JavaScript Exercises', 'Exercises'));   // "Matched"
+console.log(case_insensitive_search('JavaScript Exercises', 'Exercisess'));  // "Not Matched"
