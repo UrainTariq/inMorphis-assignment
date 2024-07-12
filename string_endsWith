@@ -1,0 +1,6 @@
+function string_endsWith(input, suffix) {
+    return input.endsWith(suffix);
+}
+
+// Test
+console.log(string_endsWith('JS PHP PYTHON', 'PYTHON'));
