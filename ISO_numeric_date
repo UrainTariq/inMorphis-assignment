@@ -1,0 +1,6 @@
+function ISO_numeric_date(dt) {
+    return dt.getDay() || 7;
+}
+
+let dt = new Date(2015, 10, 1);
+console.log(ISO_numeric_date(dt)); // 7
