@@ -1,0 +1,7 @@
+function isObject(value) {
+    return typeof value === 'object' && value !== null;
+}
+
+// Example usage:
+console.log(isObject({})); // true
+console.log(isObject(null)); // false
