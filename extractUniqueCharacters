@@ -1,0 +1,15 @@
+function extractUniqueCharacters(str) {
+    // Split the string into an array of characters
+    let chars = str.split('');
+
+    // Create a Set from the array to automatically remove duplicates
+    let uniqueChars = new Set(chars);
+
+    // Convert the Set back to an array and then join into a string
+    return Array.from(uniqueChars).join('');
+}
+
+// Example usage:
+let inputStr = "thequickbrownfoxjumpsoverthelazydog";
+let uniqueChars = extractUniqueCharacters(inputStr);
+console.log(uniqueChars); // Output: thequickbrownfxjmpsvlazydg
