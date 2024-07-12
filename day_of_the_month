@@ -1,0 +1,6 @@
+function day_of_the_month(dt) {
+    return ('0' + dt.getDate()).slice(-2);
+}
+
+let d = new Date(2015, 10, 1);
+console.log(day_of_the_month(d)); // "01"
