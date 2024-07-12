@@ -1,0 +1,11 @@
+function truncate(input, words) {
+    let wordArray = input.split(' ');
+    if (wordArray.length > words) {
+        return wordArray.slice(0, words).join(' ');
+    } else {
+        return input;
+    }
+}
+
+// Test
+console.log(truncate('The quick brown fox jumps over the lazy dog', 4));
