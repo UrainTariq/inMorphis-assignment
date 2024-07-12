@@ -1,0 +1,7 @@
+function isRegExp(value) {
+    return value instanceof RegExp;
+}
+
+// Example usage:
+console.log(isRegExp(/test/)); // true
+console.log(isRegExp('/test/')); // false
