@@ -1,0 +1,13 @@
+function search_word(input, word) {
+    let count = 0;
+    let words = input.split(' ');
+    for (let i = 0; i < words.length; i++) {
+        if (words[i] === word) {
+            count++;
+        }
+    }
+    return `'${word}' was found ${count} times.`;
+}
+
+// Test
+console.log(search_word('The quick brown fox', 'fox'));
