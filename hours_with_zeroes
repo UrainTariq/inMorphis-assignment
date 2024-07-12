@@ -1,0 +1,14 @@
+function hours_with_zeroes(date) {
+    let hours = date.getHours();
+    if (hours === 0) {
+        return "12";
+    } else if (hours > 12) {
+        return (hours - 12).toString().padStart(2, '0');
+    } else {
+        return hours.toString().padStart(2, '0');
+    }
+}
+
+// Test
+let dt = new Date(1989, 10, 1);
+console.log(hours_with_zeroes(dt)); // Example output: "12"
