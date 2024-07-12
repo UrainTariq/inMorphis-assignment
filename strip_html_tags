@@ -1,0 +1,17 @@
+function strip_html_tags(str) {
+    var cleanStr = '';
+    var insideTag = false;
+    for (var i = 0; i < str.length; i++) {
+        if (str.charAt(i) === '<') {
+            insideTag = true;
+        } else if (str.charAt(i) === '>') {
+            insideTag = false;
+        } else if (!insideTag) {
+            cleanStr += str.charAt(i);
+        }
+    }
+    return cleanStr;
+}
+
+// Test case
+console.log(strip_html_tags('<p><strong><em>PHP Exercises</em></strong></p>'));  // "PHP Exercises"
