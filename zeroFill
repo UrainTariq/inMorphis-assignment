@@ -1,0 +1,14 @@
+function zeroFill(num, width, sign) {
+    sign = sign || '+';
+    var numStr = Math.abs(num).toString();
+    var zeros = width - numStr.length;
+    while (zeros > 0) {
+        numStr = '0' + numStr;
+        zeros--;
+    }
+    return (num < 0 ? '-' : sign) + numStr;
+}
+
+// Test cases
+console.log(zeroFill(120, 5, '-'));  // "+00120"
+console.log(zeroFill(29, 4));        // "0029"
