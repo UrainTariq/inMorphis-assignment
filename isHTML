@@ -1,0 +1,7 @@
+function isHTML(str) {
+    return str.includes('<') && str.includes('>');
+}
+
+// Test
+console.log(isHTML("<div>Hello</div>")); // true
+console.log(isHTML("Hello")); // false
