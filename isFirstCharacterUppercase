@@ -1,0 +1,12 @@
+function isFirstCharacterUppercase(str) {
+    if (str.length === 0) {
+        return false; // Empty string case
+    }
+    var firstChar = str[0];
+    return firstChar >= 'A' && firstChar <= 'Z';
+}
+
+// Test
+console.log(isFirstCharacterUppercase("Hello")); // true
+console.log(isFirstCharacterUppercase("hello")); // false
+console.log(isFirstCharacterUppercase("")); // false
