@@ -1,0 +1,23 @@
+function thousandsSeparators(number) {
+    var parts = number.toString().split('.');
+    var integerPart = parts[0];
+    var decimalPart = parts.length > 1 ? '.' + parts[1] : '';
+    var result = '';
+    var count = 0;
+    
+    for (var i = integerPart.length - 1; i >= 0; i--) {
+        result = integerPart[i] + result;
+        count++;
+        if (count === 3 && i !== 0) {
+            result = ',' + result;
+            count = 0;
+        }
+    }
+    
+    return result + decimalPart;
+}
+
+// Test
+console.log(thousandsSeparators(1000)); // "1,000"
+console.log(thousandsSeparators(10000.23)); // "10,000.23"
+console.log(thousandsSeparators(100000)); // "100,000"
