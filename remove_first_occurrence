@@ -1,0 +1,10 @@
+function remove_first_occurrence(input, search) {
+    let index = input.indexOf(search);
+    if (index === -1) {
+        return input;
+    }
+    return input.substring(0, index) + input.substring(index + search.length);
+}
+
+// Test
+console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
