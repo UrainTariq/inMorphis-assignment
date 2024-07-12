@@ -1,0 +1,15 @@
+function text_truncate(input, length, ending = '...') {
+    if (length === undefined) {
+        length = input.length;
+    }
+    if (input.length > length) {
+        return input.substring(0, length) + ending;
+    } else {
+        return input;
+    }
+}
+
+// Test
+console.log(text_truncate('We are doing JS string exercises.'));
+console.log(text_truncate('We are doing JS string exercises.', 19));
+console.log(text_truncate('We are doing JS string exercises.', 15, '!!'));
