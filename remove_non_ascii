@@ -1,0 +1,12 @@
+function remove_non_ascii(str) {
+    var cleanStr = '';
+    for (var i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) >= 32 && str.charCodeAt(i) <= 126) {
+            cleanStr += str.charAt(i);
+        }
+    }
+    return cleanStr;
+}
+
+// Test case
+console.log(remove_non_ascii('äÄçÇéÉêPHP-MySQLöÖÐþúÚ'));  // "PHP-MySQL"
