@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image on Mouse Hover</title>
+</head>
+<body>
+    <h2>Hover over the image to change it</h2>
+    <img src="image1.jpg" alt="Image 1" id="myImage" onmouseover="changeImage()" onmouseout="restoreImage()">
+
+    <script>
+        let originalSrc = "image1.jpg";
+        let hoverSrc = "image2.jpg";
+
+        function changeImage() {
+            let imgElement = document.getElementById("myImage");
+            imgElement.src = hoverSrc;
+        }
+
+        function restoreImage() {
+            let imgElement = document.getElementById("myImage");
+            imgElement.src = originalSrc;
+        }
+    </script>
+</body>
+</html>
