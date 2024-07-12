@@ -1,0 +1,7 @@
+function areSameType(value1, value2) {
+    return typeof value1 === typeof value2;
+}
+
+// Example usage:
+console.log(areSameType(42, '42')); // false
+console.log(areSameType(true, false)); // true
