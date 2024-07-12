@@ -1,0 +1,8 @@
+function uppercase_meridiem() {
+    let now = new Date();
+    let meridiem = now.getHours() >= 12 ? 'Post Meridiem' : 'Ante Meridiem';
+    return meridiem;
+}
+
+// Test
+console.log(uppercase_meridiem()); // Example output: "Post Meridiem"
