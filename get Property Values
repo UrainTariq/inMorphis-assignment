@@ -1,0 +1,12 @@
+function getPropertyValues(arr, prop) {
+    var values = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i][prop] !== undefined) {
+            values.push(arr[i][prop]);
+        }
+    }
+    return values;
+}
+
+var objects = [{ name: 'John', age: 30 }, { name: 'Jane', age: 25 }, { name: 'Jim' }];
+console.log(getPropertyValues(objects, 'age')); // [30, 25]
