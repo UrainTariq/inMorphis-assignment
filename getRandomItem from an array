@@ -1,0 +1,6 @@
+function getRandomItem(arr) {
+    var randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+}
+
+console.log(getRandomItem([1, 2, 3, 4, 5])); // random item from the array
