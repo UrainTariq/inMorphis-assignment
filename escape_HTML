@@ -1,0 +1,25 @@
+function escape_HTML(input) {
+    let escaped = '';
+    for (let i = 0; i < input.length; i++) {
+        switch (input[i]) {
+            case '<':
+                escaped += '&lt;';
+                break;
+            case '>':
+                escaped += '&gt;';
+                break;
+            case '&':
+                escaped += '&amp;';
+                break;
+            case '"':
+                escaped += '&quot;';
+                break;
+            default:
+                escaped += input[i];
+        }
+    }
+    return escaped;
+}
+
+// Test
+console.log(escape_HTML('<a href="javascript-string-exercise-17.php" target="_blank">'));
