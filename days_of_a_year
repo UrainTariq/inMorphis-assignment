@@ -1,0 +1,6 @@
+function days_of_a_year(year) {
+    return new Date(year, 12, 0).getDate();
+}
+
+console.log(days_of_a_year(2015)); // 365
+console.log(days_of_a_year(2016)); // 366
