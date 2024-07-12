@@ -1,0 +1,10 @@
+function ascii_to_hexa(input) {
+    let hex = '';
+    for (let i = 0; i < input.length; i++) {
+        hex += input.charCodeAt(i).toString(16);
+    }
+    return hex;
+}
+
+// Test
+console.log(ascii_to_hexa('12'));
