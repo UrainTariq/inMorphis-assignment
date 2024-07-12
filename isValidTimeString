@@ -1,0 +1,19 @@
+function isValidTimeString(time) {
+    var parts = time.split(':');
+    if (parts.length !== 2) {
+        return false;
+    }
+    var hours = parseInt(parts[0]);
+    var minutes = parseInt(parts[1]);
+    if (isNaN(hours) || isNaN(minutes)) {
+        return false;
+    }
+    if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+        return false;
+    }
+    return true;
+}
+
+// Test
+console.log(isValidTimeString("23:59")); // true
+console.log(isValidTimeString("24:00")); // false
