@@ -1,0 +1,10 @@
+function displayColors(colors, ordinals) {
+    for (var i = 0; i < colors.length; i++) {
+        var ordinal = ordinals[(i + 1) % 10] || 'th';
+        console.log((i + 1) + ordinal + " choice is " + colors[i]);
+    }
+}
+
+var colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+var ordinals = ["th", "st", "nd", "rd"];
+displayColors(colors, ordinals);
