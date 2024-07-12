@@ -1,0 +1,12 @@
+function countWords(str) {
+    str = str.replace(/^\s+|\s+$/g, ''); // Trim whitespace from start and end
+    str = str.replace(/\s+/g, ' '); // Replace multiple spaces with a single space
+    if (str === "") {
+        return 0;
+    }
+    return str.split(' ').length;
+}
+
+// Test
+console.log(countWords("  This  is a    test   string  ")); // 5
+console.log(countWords("  ")); // 0
