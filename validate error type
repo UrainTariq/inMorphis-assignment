@@ -1,0 +1,7 @@
+function isError(value) {
+    return value instanceof Error;
+}
+
+// Example usage:
+console.log(isError(new Error('Something went wrong'))); // true
+console.log(isError('Error')); // false
