@@ -1,0 +1,6 @@
+function truncate_string(input, length) {
+    return input.slice(0, length);
+}
+
+// Test
+console.log(truncate_string("Robin Singh", 4)); // "Robi"
