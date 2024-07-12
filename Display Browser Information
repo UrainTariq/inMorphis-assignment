@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Browser Information and Page Details</title>
+</head>
+<body>
+    <script>
+        // Browser information
+        document.write("<h2>Browser Information:</h2>");
+        document.write("User Agent: " + navigator.userAgent + "<br>");
+        document.write("App Name: " + navigator.appName + "<br>");
+        document.write("App Version: " + navigator.appVersion + "<br>");
+        document.write("Platform: " + navigator.platform + "<br>");
+        document.write("Cookies Enabled: " + navigator.cookieEnabled + "<br>");
+
+        // Monitor resolution
+        document.write("<h2>Monitor Resolution:</h2>");
+        document.write("Screen Width: " + screen.width + "<br>");
+        document.write("Screen Height: " + screen.height + "<br>");
+        document.write("Color Depth: " + screen.colorDepth + "<br>");
+
+        // Page modification date
+        document.write("<h2>Page Modification Date:</h2>");
+        document.write("Last Modified: " + document.lastModified + "<br>");
+    </script>
