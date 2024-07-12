@@ -1,0 +1,6 @@
+function alphabetize_string(input) {
+    return input.split('').sort().join('');
+}
+
+// Test
+console.log(alphabetize_string('United States'));
