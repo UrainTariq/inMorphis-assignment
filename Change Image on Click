@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image on Click</title>
+</head>
+<body>
+    <h2>Click the image to change it</h2>
+    <img src="image1.jpg" alt="Image 1" id="myImage" onclick="changeImage()">
+
+    <script>
+        function changeImage() {
+            let imgElement = document.getElementById("myImage");
+            if (imgElement.src.match("image1.jpg")) {
+                imgElement.src = "image2.jpg";
+            } else {
+                imgElement.src = "image1.jpg";
+            }
+        }
+    </script>
+</body>
+</html>
