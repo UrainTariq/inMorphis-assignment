@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Input</title>
+    <script>
+        // This array will store the items entered by the user
+        let items = [];
+
+        // This function is called when the "Add" button is clicked
+        function addItem() {
+            // Get the value from the input field
+            const input = document.getElementById('itemInput');
+            const value = input.value;
+
+            // If the input is not empty, add the value to the items array and clear the input field
+            if (value) {
+                items.push(value);
+                input.value = ''; // Clear the input field
+            }
+        }
+
+        // This function is called when the "Display" button is clicked
+        function displayItems() {
+            // Get the unordered list element
+            const itemList = document.getElementById('itemList');
+            itemList.innerHTML = ''; // Clear any previous items in the list
+
+            // Loop through the items array and create a list item for each element
+            items.forEach((item, index) => {
+                const li = document.createElement('li'); // Create a new list item element
+                li.textContent = `Element ${index} = ${item}`; // Set the text content of the list item
+                itemList.appendChild(li); // Add the list item to the unordered list
+            });
+        }
+    </script>
+</head>
+<body>
+    <!-- Input field for entering items -->
+    <input type="text" id="itemInput" placeholder="Enter an item">
+    <!-- Button to add items to the array -->
+    <button onclick="addItem()">Add</button>
+    <!-- Button to display items in the array -->
+    <button onclick="displayItems()">Display</button>
+    <!-- Unordered list to display the items -->
+    <ul id="itemList"></ul>
+</body>
+</html>
