@@ -1,0 +1,12 @@
+function unix_to_time(timestamp) {
+    let dt = new Date(timestamp * 1000);
+    let year = dt.getFullYear();
+    let month = ('0' + (dt.getMonth() + 1)).slice(-2);
+    let day = ('0' + dt.getDate()).slice(-2);
+    let hours = ('0' + dt.getHours()).slice(-2);
+    let minutes = ('0' + dt.getMinutes()).slice(-2);
+    let seconds = ('0' + dt.getSeconds()).slice(-2);
+    return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+}
+
+console.log(unix_to_time(1611147045)); // "20/01/2021 18:37:25"
