@@ -1,0 +1,9 @@
+// Function to tell fortune
+function tellFortune(numChildren, partnerName, location, jobTitle) {
+    console.log(`You will be a ${jobTitle} in ${location}, and married to ${partnerName} with ${numChildren} kids.`);
+}
+
+// Call the function with different values
+tellFortune(2, "Alice", "New York", "Web Developer");
+tellFortune(3, "Bob", "Los Angeles", "Teacher");
+tellFortune(1, "Eve", "San Francisco", "Artist");
