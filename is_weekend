@@ -1,0 +1,8 @@
+function is_weekend(dt) {
+    let day = dt.getDay();
+    return day === 0 || day === 6 ? "weekend" : undefined;
+}
+
+console.log(is_weekend(new Date('Nov 15, 2014'))); // "weekend"
+console.log(is_weekend(new Date('Nov 16, 2014'))); // "weekend"
+console.log(is_weekend(new Date('Nov 17, 2014'))); // undefined
