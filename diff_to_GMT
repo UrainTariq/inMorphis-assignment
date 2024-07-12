@@ -1,0 +1,11 @@
+function diff_to_GMT(date) {
+    let offset = date.getTimezoneOffset() / -60;
+    let sign = offset >= 0 ? '+' : '-';
+    let hours = Math.abs(Math.floor(offset));
+    let minutes = Math.abs(date.getTimezoneOffset() % 60);
+    return `${sign}${hours.toString().padStart(2, '0')}.${minutes.toString().padStart(2, '0')}`;
+}
+
+// Test
+let dt = new Date();
+console.log(diff_to_GMT(dt)); // Example output: "+05.500"
