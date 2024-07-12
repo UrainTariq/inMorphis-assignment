@@ -1,0 +1,26 @@
+function camelize(input) {
+    let camelized = '';
+    let capitalizeNext = false;
+
+    for (let i = 0; i < input.length; i++) {
+        let char = input[i];
+
+        if (char === ' ') {
+            capitalizeNext = true;
+        } else {
+            if (capitalizeNext) {
+                camelized += char.toUpperCase();
+                capitalizeNext = false;
+            } else {
+                camelized += char.toLowerCase();
+            }
+        }
+    }
+
+    return camelized;
+}
+
+// Test
+console.log(camelize("JavaScript Exercises")); // "javaScriptExercises"
+console.log(camelize("JavaScript exercises")); // "javaScriptExercises"
+console.log(camelize("JavaScriptExercises")); // "javaScriptExercises"
