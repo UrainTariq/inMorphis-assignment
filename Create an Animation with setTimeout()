@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation with setTimeout()</title>
+    <style>
+        .marble {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="marble" id="marble" onmouseover="stopAnimation()" onmouseout="startAnimation()"></div>
+
+    <script>
+        let animationId;
+
+        function animate() {
+            let marble = document.getElementById("marble");
+            let x = 0;
+            let y = 0;
+            let speedX = 5;
+            let speedY = 2;
+
+            function move() {
+                x += speedX;
+                y += speedY;
+                marble.style.left = x + "px";
+                marble.style.top = y + "px";
+
+                if (x + marble.offsetWidth >= window.innerWidth || x <= 0) {
+                    speedX = -speedX;
+                }
+                if (y + marble.offsetHeight >= window.innerHeight || y <= 0) {
+                    speedY = -speedY;
+                }
+
+                animationId = setTimeout(move, 10);
+            }
+
+            move();
+        }
+
+        function stopAnimation() {
+            clearTimeout(animationId);
+        }
+
+        function startAnimation() {
+            animate();
+        }
+
+        animate(); // Start animation initially
+    </script>
+</body>
+</html>
