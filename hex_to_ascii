@@ -1,0 +1,10 @@
+function hex_to_ascii(input) {
+    let ascii = '';
+    for (let i = 0; i < input.length; i += 2) {
+        ascii += String.fromCharCode(parseInt(input.substr(i, 2), 16));
+    }
+    return ascii;
+}
+
+// Test
+console.log(hex_to_ascii('3132'));
