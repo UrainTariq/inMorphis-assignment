@@ -1,0 +1,9 @@
+function yesterday(dateStr) {
+    let dt = new Date(dateStr);
+    dt.setDate(dt.getDate() - 1);
+    return dt.toString();
+}
+
+console.log(yesterday('Nov 15, 2014'));
+console.log(yesterday('Nov 16, 2015'));
+console.log(yesterday('Nov 17, 2016'));
