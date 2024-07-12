@@ -1,0 +1,15 @@
+function capitalize_Words(input) {
+    let words = input.toLowerCase().split(' ');
+    let capitalizedWords = [];
+
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        let capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1);
+        capitalizedWords.push(capitalizedWord);
+    }
+
+    return capitalizedWords.join(' ');
+}
+
+// Test
+console.log(capitalize_Words('js string exercises')); // "Js String Exercises"
