@@ -1,0 +1,22 @@
+function uncamelize(input, separator) {
+    separator = typeof separator === 'undefined' ? ' ' : separator;
+    let uncamelized = '';
+
+    for (let i = 0; i < input.length; i++) {
+        let char = input[i];
+
+        // Check if the current character is uppercase and not the first character
+        if (char === char.toUpperCase() && i > 0) {
+            uncamelized += separator + char.toLowerCase();
+        } else {
+            uncamelized += char.toLowerCase();
+        }
+    }
+
+    return uncamelized;
+}
+
+// Test
+console.log(uncamelize('helloWorld')); // "hello world"
+console.log(uncamelize('helloWorld', '-')); // "hello-world"
+console.log(uncamelize('helloWorld', '_')); // "hello_world"
