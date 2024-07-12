@@ -1,0 +1,7 @@
+function isBoolean(value) {
+    return typeof value === 'boolean';
+}
+
+// Example usage:
+console.log(isBoolean(true)); // true
+console.log(isBoolean('true')); // false
