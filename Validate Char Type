@@ -1,0 +1,7 @@
+function isChar(value) {
+    return typeof value === 'string' && value.length === 1;
+}
+
+// Example usage:
+console.log(isChar('a')); // true
+console.log(isChar('abc')); // false
