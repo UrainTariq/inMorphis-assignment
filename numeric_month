@@ -1,0 +1,6 @@
+function numeric_month(dt) {
+    return ('0' + (dt.getMonth() + 1)).slice(-2);
+}
+
+let dt = new Date(2015, 10, 1);
+console.log(numeric_month(dt)); // "11"
