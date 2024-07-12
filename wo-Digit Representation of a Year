@@ -1,0 +1,7 @@
+function sort_year(date) {
+    return (date.getFullYear() % 100).toString().padStart(2, '0');
+}
+
+// Test
+let dt = new Date(1989, 10, 1);
+console.log(sort_year(dt)); // Output: "89"
