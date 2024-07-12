@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert and Style Paragraphs</title>
+</head>
+<body>
+    <h2>Original Paragraphs</h2>
+    <p id="paragraph1">Paragraph 1</p>
+    <p id="paragraph2">Paragraph 2</p>
+
+    <button onclick="insertParagraph()">Insert Paragraph</button>
+    <button onclick="changeStyle()">Change Style</button>
+
+    <script>
+        function insertParagraph() {
+            let newParagraph = document.createElement("p");
+            newParagraph.textContent = "New Paragraph";
+            newParagraph.id = "newParagraph";
+            
+            let paragraph2 = document.getElementById("paragraph2");
+            paragraph2.parentNode.insertBefore(newParagraph, paragraph2.nextSibling);
+        }
+
+        function changeStyle() {
+            let newParagraph = document.getElementById("newParagraph");
+            if (newParagraph.style.fontWeight === "bold") {
+                newParagraph.style.fontWeight = "normal";
+                newParagraph.style.color = "black";
+            } else {
+                newParagraph.style.fontWeight = "bold";
+                newParagraph.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
