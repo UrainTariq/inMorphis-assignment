@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Visit Tracking with Cookies</title>
+</head>
+<body>
+    <h2>Welcome to the Page</h2>
+    <p id="visitInfo"></p>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+        }
+
+        // Function to get a cookie value by name
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let ca = document.cookie.split(';');
+            for(let i=0;i < ca.length;i++) {
+                let c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        // Function to display visit information
+        function displayVisitInfo() {
+            let visitCount = getCookie("visitCount");
+            let lastVisit = getCookie("lastVisit");
+
+            if (!visitCount) {
+                visitCount = 1;
+                setCookie("visitCount", visitCount, 365);
+                document.getElementById("visitInfo").textContent = "Welcome! This is your first visit.";
+            } else {
+                visitCount = parseInt(visitCount) + 1;
+                setCookie("visitCount", visitCount, 365);
+                document.getElementById("visitInfo").textContent = "Welcome back! You have visited " + visitCount + " times.";
+                if (lastVisit) {
+                    document.getElementById("visitInfo").textContent += " Last visited on: " + lastVisit;
+                }
+            }
+
+            // Update last visit timestamp
+            let now = new Date();
+            setCookie("lastVisit", now.toUTCString(), 365);
+        }
+
+        // Display visit information on page load
+        displayVisitInfo();
+    </script>
+</body>
+</html>
