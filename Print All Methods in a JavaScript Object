@@ -1,0 +1,7 @@
+function getAllMethods(obj) {
+    return Object.getOwnPropertyNames(obj).filter(function(property) {
+        return typeof obj[property] == "function";
+    });
+}
+
+console.log(getAllMethods(Array)); // Output: ["from", "of"]
