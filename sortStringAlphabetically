@@ -1,0 +1,9 @@
+function sortStringAlphabetically(str) {
+    // Convert the string to an array of characters, sort them, then join back into a string
+    return str.split('').sort().join('');
+}
+
+// Example usage:
+let inputString = "javascript";
+let sortedString = sortStringAlphabetically(inputString);
+console.log(sortedString); // Output: aacijprstv
