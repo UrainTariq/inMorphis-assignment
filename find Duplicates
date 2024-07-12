@@ -1,0 +1,15 @@
+function findDuplicates(arr) {
+    var duplicates = [];
+    var seen = {};
+    for (var i = 0; i < arr.length; i++) {
+        if (seen[arr[i]] && duplicates.indexOf(arr[i]) === -1) {
+            duplicates.push(arr[i]);
+        } else {
+            seen[arr[i]] = true;
+        }
+    }
+    return duplicates;
+}
+
+var arr = [1, 2, 3, 4, 1, 2, 3, 5];
+console.log(findDuplicates(arr)); // [1, 2, 3]
