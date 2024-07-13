@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw Rectangle</title>
+</head>
+<body>
+<canvas id="rectangleCanvas" width="200" height="200"></canvas>
+<script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById("rectangleCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw the outer black rectangle
+    ctx.fillStyle = "black"; 
+    ctx.fillRect(20, 20, 160, 160); 
+
+    // Draw the middle white rectangle
+    ctx.fillStyle = "white"; 
+    ctx.fillRect(40, 40, 120, 120); 
+
+    // Draw the inner white rectangle with black border
+    ctx.fillStyle = "white"; 
+    ctx.fillRect(60, 60, 80, 80);
+    ctx.strokeStyle = "black"; 
+    ctx.lineWidth = 2;
+    ctx.strokeRect(60, 60, 80, 80); // Draw the border
+</script>
+</body>
+</html>
