@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw Right-angled Triangle</title>
+</head>
+<body>
+<canvas id="triangleCanvas" width="200" height="200"></canvas>
+<script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById("triangleCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw the right-angled triangle
+    ctx.beginPath(); // Start a new path
+    ctx.moveTo(20, 20); // Move to the starting point (20, 20)
+    ctx.lineTo(20, 180); // Draw a line to (20, 180)
+    ctx.lineTo(180, 180); // Draw a line to (180, 180)
+    ctx.closePath(); // Close the path (draw a line back to the starting point)
+
+    ctx.fillStyle = "black"; // Set the color to black
+    ctx.fill(); // Fill the triangle with the color
+</script>
+</body>
+</html>
