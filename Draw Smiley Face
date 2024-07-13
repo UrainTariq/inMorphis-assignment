@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw Smiley Face</title>
+</head>
+<body>
+<canvas id="smileyCanvas" width="200" height="200"></canvas>
+<script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById("smileyCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw the outer circle (face)
+    ctx.beginPath(); // Start a new path
+    ctx.arc(100, 100, 80, 0, 2 * Math.PI); // Draw a circle with center (100, 100) and radius 80
+    ctx.stroke(); // Outline the circle
+
+    // Draw the left eye
+    ctx.beginPath(); // Start a new path
+    ctx.arc(70, 80, 10, 0, 2 * Math.PI); // Draw a circle with center (70, 80) and radius 10
+    ctx.stroke(); // Outline the circle
+
+    // Draw the right eye
+    ctx.beginPath(); // Start a new path
+    ctx.arc(130, 80, 10, 0, 2 * Math.PI); // Draw a circle with center (130, 80) and radius 10
+    ctx.stroke(); // Outline the circle
+
+    // Draw the mouth
+    ctx.beginPath(); // Start a new path
+    ctx.moveTo(60, 120); // Move to the starting point (60, 120)
+    ctx.quadraticCurveTo(100, 160, 140, 120); // Draw a quadratic curve to (140, 120) with control point (100, 160)
+    ctx.stroke(); // Outline the curve
+
+    // Draw the connecting line between eyes
+    ctx.beginPath(); // Start a new path
+    ctx.moveTo(70, 80); // Move to the left eye center
+    ctx.lineTo(130, 80); // Draw a line to the right eye center
+    ctx.stroke(); // Outline the line
+</script>
+</body>
+</html>
