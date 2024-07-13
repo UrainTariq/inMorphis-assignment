@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Draw Intersecting Rectangles</title>
+</head>
+<body>
+<canvas id="intersectingRectanglesCanvas" width="200" height="200"></canvas>
+<script>
+    // Get the canvas element and its context
+    var canvas = document.getElementById("intersectingRectanglesCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // Draw the first blue rectangle
+    ctx.fillStyle = "blue"; 
+    ctx.fillRect(30, 30, 100, 100); // Draw the rectangle at (30, 30) with width 100 and height 100
+
+    // Draw the second red rectangle with alpha transparency
+    ctx.fillStyle = "rgba(255, 0, 0, 0.5)"; // Set the color to red with 50% transparency
+    ctx.fillRect(80, 80, 100, 100); // Draw the rectangle at (80, 80) with width 100 and height 100
+</script>
+</body>
+</html>
