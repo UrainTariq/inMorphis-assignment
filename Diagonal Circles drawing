@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagonal Circles</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
+
+<script>
+    function drawCircles() {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        var numberOfCircles = 6;
+        var radius = 20;
+        var spacing = 50;
+
+        for (var i = 0; i < numberOfCircles; i++) {
+            var grayValue = Math.floor(255 - (i * (255 / (numberOfCircles - 1))));
+            var color = "rgb(" + grayValue + "," + grayValue + "," + grayValue + ")";
+            var x = (i + 1) * spacing;
+            var y = (i + 1) * spacing;
+            
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+            ctx.fillStyle = color;
+            ctx.fill();
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = '#000000';
+            ctx.stroke();
+        }
+    }
+
+    drawCircles();
+</script>
+</body>
+</html>
